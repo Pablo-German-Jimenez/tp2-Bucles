@@ -15,7 +15,7 @@ do {
   console.log(nota);
   //verificar si la nota es un numero y ademas  esta entre 0 y 10
   if (!isNaN(nota) && nota >= 0 && nota <= 10) {
-    switch (nota) {
+    switch (nota){
       case 0:
       case 1:
       case 2:

@@ -7,7 +7,7 @@
 // 12345
 // 123456
 
-const numrep = parseInt(prompt("Ingrese el numero de repeticiones entre 1 y 50"));
+/*const numrep = parseInt(prompt("Ingrese el numero de repeticiones entre 1 y 50"));
 //verificar si se ingreso un numero
 if (!isNaN(numrep)) {
     //verificar si el numero esta entre 1 y 50
@@ -23,4 +23,4 @@ if (!isNaN(numrep)) {
     }
 } else {
     alert("valor erroneo");
-}
+}*/

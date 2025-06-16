@@ -4,11 +4,15 @@
 Nota: usar confirm() https://www.w3schools.com/jsref/met_win_confirm.asp
 */
 
-do{
-    const cadenasUsuario = prompt('Ingrese una palabrita para concatenar, o pulse cancelar y mostramos todo eeh!');
-    respuestas.innerHTML=`${cadenasUsuario}`;
-}while(
-    confirm('Deseas continuar?')
-)
+let resultado = '';
+do {
+	const palabra = prompt('Ingresa una palabra');
+	if (resultado == '') {
+		//si es la primer palabra, concateno sin usar el guion
+		resultado = palabra;
+	} else {
+		resultado = resultado + '-' + palabra;
+	}
+} while ( confirm('¿Desea continuar?'));
 
-
+document.writeln(resultado);

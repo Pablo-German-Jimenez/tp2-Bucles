@@ -45,4 +45,4 @@ switch(num){
             break;
     case 10: respuestas.innerHTML=`<h2 class="text-success">Sobresaliente!</h2>`
 
-}
+}s

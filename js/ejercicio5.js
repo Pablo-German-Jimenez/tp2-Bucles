@@ -21,13 +21,14 @@
 
 let resto = 0;
 let letra = "";
+let array = [(T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)]
+array.push(" ");
 do {
-    const numero = prompt("Ingrese su dni");
+    const numero = parseInt(prompt("Ingrese su dni"));
     if (!isNaN(numero) || numero !=null) {  
-        numeroNew = parseInt(numero);
-        if (numeroNew >= 0 || numeroNew <= 99999999) {
-            //obtener el resto de dividir el numero en 23
-            resto = numero % 23;
+        let numeroNew = parseInt(numero);
+        if(numeroNew >= 0 || numeroNew <= 99999999) {
+           resto = numero % 23;
             console.log(resto);
             switch (resto) {
                 case 0:
@@ -100,8 +101,7 @@ do {
                     letra = "E";
                     break;
                 default:
-                    //si el numero no se encuentra entre 0 y 22
-                    alert('Ingrese un numero valido');
+                       alert('Ingrese un numero valido');
                 }
                 alert("Numero: " + numero + ", Letra: " + letra);
         }else{

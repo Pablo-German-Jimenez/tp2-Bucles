@@ -9,7 +9,7 @@ const segundoEdad = parseInt(prompt("Ingrese la edad:"));
 const TercerNombre = prompt("Ingrese el tercer nombre:");
 const TercerEdad = parseInt(prompt("Ingrese la edad:"));
 
-//Función max() devuelve el mayor de los argumentos pasados.
+//Método max() devuelve el mayor de los argumentos pasados.
 const maximo = Math.max(primerEdad, segundoEdad, TercerEdad);
 
 if (maximo == primerEdad) {

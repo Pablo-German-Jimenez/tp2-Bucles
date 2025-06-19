@@ -20,15 +20,3 @@ for(let indiceFila=0; indiceFila < filas; indiceFila++){
 document.writeln('</table>');
 
 
-/*let filas = parseInt(prompt('Dame el numero de filitas'));
-
-let columnas = prompt('Ahora dime la cantidad de columnitas');
-console.log(filas,columnas);
-
-
-document.writeln = `<table '><tbody>`;
-for( let indiceFilas =0; indiceFilas<filas;indiceFilas++){
-document.writeln = `<tr '><td >35</td></tr>`;
-}
-
-document.writeln = `</tbody></table>`;*/

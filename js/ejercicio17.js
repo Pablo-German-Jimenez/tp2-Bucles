@@ -1,29 +1,30 @@
 // 17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
 
-//Declaro un arreglo de vocales
-const vocales = ["a", "e", "i", "o", "u"];
-const texto = prompt("Ingrese una frase");
-// transformo el texto a minusculas
-const textoMinisculas = texto.toLowerCase();
-let posicion = 0;
-//Creo una variable bandera para detener el bucle
-let stop = false;
+let respuestas = document.querySelector("#respuestas");
+const texto = prompt("Ingresá un texto para encontrar la primera vocal:");
 
-for (let i = 0; i < textoMinisculas.length; i++) {
-  for (let j = 0; j < vocales.length; j++) {
-    if (vocales[j] === textoMinisculas.charAt(i)) {
-      posicion = i;
-      stop = true;
-      break;
-    }
-  }
-  // aqui preguntamos si stop == true, si lo es salgo del bucle
-  if (stop) {
+let posicionPrimeraVocal = -1;
+
+const textoEnMinusculas = texto.toLowerCase();
+
+for (let i = 0; i < textoEnMinusculas.length; i++) {
+  const caracter = textoEnMinusculas.charAt(i);
+  if (
+    caracter === "a" ||
+    caracter === "e" ||
+    caracter === "i" ||
+    caracter === "o" ||
+    caracter === "u"
+  ) {
+    posicionPrimeraVocal = i;
     break;
   }
 }
-if(stop!= true){
-  document.writeln(`La palabra ingresada no tiene vocales` );
-}else{
-  document.writeln(`La primera vocal '${textoMinisculas.charAt(posicion)}' está en la posición ${posicion}` );
+
+if (posicionPrimeraVocal !== -1) {
+  respuestas.innerHTML = `<h2 class='text-info text-center'>La primera vocal está en la posición:${
+    posicionPrimeraVocal + 1
+  }</h2>`;
+} else {
+  respuestas.innerHTML = `<h2 class='text-danger text-center'>No se encontraron vocales en el texto ingresado.</h2>`;
 }

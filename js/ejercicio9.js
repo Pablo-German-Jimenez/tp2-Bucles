@@ -13,23 +13,21 @@
 // 9 (Múltiplo de 9)
 // 10
 
-//crear variables
 const j = 500;
-//bucle desde 1 hasta j=500
+
 for (let i = 1; i <= j; i++) {
-    document.writeln(i);
-    //si el resto de dividir i/4 es igual a 0
-    if (i % 4 == 0) {
-        document.writeln(" (Multiplo de 4)");
-    }
-    //si el resto de dividir i/9 es igual a 0
-    if (i % 9 == 0) {
-        document.writeln(" (Multiplo de 9)");
-    }
-    //agrego un salto de linea
-    document.writeln("<br>");
-    //si es multiplo de 5 imprimir linea
-    if (i % 5 == 0) {
-        document.writeln("<hr>");
-    }
+  document.writeln(i);
+
+  if (i % 4 == 0) {
+    document.writeln(" (Multiplo de 4)");
+  }
+
+  if (i % 9 == 0) {
+    document.writeln(" (Multiplo de 9)");
+  }
+  document.writeln("<br>");
+
+  if (i % 5 == 0) {
+    document.writeln("<hr>");
+  }
 }

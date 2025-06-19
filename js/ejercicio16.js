@@ -1,10 +1,10 @@
 // 16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
+let respuestas = document.querySelector("#respuestas");
+let recorrePalabra = "";
 
-const cadena = prompt("Ingrese un Texto");
-let caracter, salida = "";
+let fraseUsuario = prompt("Ingresa una frase para invertirla!");
 
-for (let j = 0; j < cadena.length; j++) {
-    caracter = cadena.charAt(j); //recupera el caracter de la posicion j del string.
-    salida = caracter + salida;
+for (i = fraseUsuario.length - 1; i >= 0; i--) {
+  recorrePalabra += fraseUsuario[i];
 }
-document.writeln(salida);
+respuestas.innerHTML = `<h2 class='text-yellow text-center'>La palabra invertida es ${recorrePalabra}</h2>`;

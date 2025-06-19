@@ -2,18 +2,17 @@
 
 const filas = parseInt(prompt('Ingrese un numero de filas'));
 const columnas = parseInt(prompt('Ingrese un numero de columnas'));
-// total valor para cargar las celdas de la tabla
+
 console.log(filas,columnas);
 let total = filas * columnas;
 
 document.writeln('<table border>');
 for(let indiceFila=0; indiceFila < filas; indiceFila++){
-    // aqui dibujo la fila
+  
     document.writeln('<tr>');
-    // dibujar las celdas
-    for(let indiceColumna=0; indiceColumna< columnas; indiceColumna++){
+   for(let indiceColumna=0; indiceColumna< columnas; indiceColumna++){
         document.writeln('<td>'+total+'</td>');
-         total--; //total = total-1;
+         total--; 
     }
     document.writeln('</tr>');
 }

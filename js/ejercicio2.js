@@ -22,29 +22,32 @@ Output: Número erróneo
 Output: Introduce un número válido
 */
 
-
-
-let num = parseInt(prompt('Ingresa una nota de 0 a 10!'));
-let respuestas = document.querySelector('#respuestas');
-if(!isNaN(num)||num>0&num<10){
-switch(num){
+let num = parseInt(prompt("Ingresa una nota de 0 a 10!"));
+let respuestas = document.querySelector("#respuestas");
+if (!isNaN(num) || (num > 0) & (num < 10)) {
+  switch (num) {
     case 1:
-        case 2:
-            respuestas.innerHTML='<h1 class="text-danger">Muy deficiente</h1>'
-            break;
+    case 2:
+      respuestas.innerHTML = '<h1 class="text-danger">Muy deficiente</h1>';
+      break;
     case 3:
-        case 4: respuestas.innerHTML=`<h2 class="text-danger">Insuficiente</h2>`
-            break;
+    case 4:
+      respuestas.innerHTML = `<h2 class="text-danger">Insuficiente</h2>`;
+      break;
     case 5:
-        case 6: respuestas.innerHTML=`<h2 class="text-warning">Suficiente</h2>`
-            break;
-        case 7: respuestas.innerHTML=`<h2 class="text-primary">Bien!</h2>`
-            break;
+    case 6:
+      respuestas.innerHTML = `<h2 class="text-warning">Suficiente</h2>`;
+      break;
+    case 7:
+      respuestas.innerHTML = `<h2 class="text-primary">Bien!</h2>`;
+      break;
     case 8:
-        case 9:
-            respuestas.innerHTML="<h2 class='text-info-emphasis'>Notable!</h2>"
-            break;
-    case 10: respuestas.innerHTML=`<h2 class="text-success">Sobresaliente!</h2>`;
-  
-
-}}else{ respuestas.innerHTML = `<h2 class="text-danger">Ingrese un número válido</h2>`}
+    case 9:
+      respuestas.innerHTML = "<h2 class='text-info-emphasis'>Notable!</h2>";
+      break;
+    case 10:
+      respuestas.innerHTML = `<h2 class="text-success">Sobresaliente!</h2>`;
+  }
+} else {
+  respuestas.innerHTML = `<h2 class="text-danger">Ingrese un número válido</h2>`;
+}
